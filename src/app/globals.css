@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pepe-green: #000A00;
+  --pepe-dark-green: #001200;
+  --pepe-light-green: #001F00;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+html, body {
+  background-color: var(--pepe-green) !important;
+  color: white;
+  font-family: var(--font-montserrat);
+  overflow-x: hidden;
+}
+
+#__next {
+  background-color: var(--pepe-green) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
+
+p {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+}
+
+.section-divider {
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 2rem 0;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.exchange-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.exchange-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Custom font styling to match the design */
+.pepe-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  .pepe-title {
+    font-size: 3rem;
+  }
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4ade80;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
+
+/* Hide scrollbar for mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+} 
