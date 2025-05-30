@@ -19,10 +19,10 @@ const Hero = () => {
   ];
 
   const socialLinks = [
-    { name: 'twitter', logo: '/images/twitter (2).avif', url: '#' },
-    { name: 'discord', logo: '/images/cm c.avif', url: '#' },
-    { name: 'dextools', logo: '/images/uniswap2.avif', url: '#' },
-    { name: 'etherscan', logo: '/images/etherscan.avif', url: '#' },
+    { name: 'twitter', logo: '/images/twitter (2).avif', url: 'https://x.com/pepe_on_eth' },
+    { name: 'telegram', logo: '/images/telegram.avif', url: 'https://t.me/pepecoin_eth_erc' },
+    { name: 'website', logo: '/images/website.avif', url: 'https://www.pepe.site' },
+    { name: 'reddit', logo: '/images/reddit.avif', url: 'https://www.reddit.com/user/pepecoin_on_eth/' },
   ];
 
   return (
