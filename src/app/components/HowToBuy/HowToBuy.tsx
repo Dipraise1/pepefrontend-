@@ -16,7 +16,7 @@ const HowToBuy = () => {
     {
       title: 'create a wallet',
       description: 'download metamask or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome extension by going to metamask.io.',
-      icon: '/images/how to buy 1 .avif'
+      icon: '/images/how to buy 1 .png'
     },
     {
       title: 'get some eth',
@@ -26,12 +26,12 @@ const HowToBuy = () => {
     {
       title: 'go to uniswap',
       description: 'connect to Uniswap. Go to app.uniswap.org in google chrome or on the browser inside Metamask app. Connect your wallet. Paste the $PEPE token address into Uniswap, select $PEPE, and confirm.',
-      icon: '/images/uniswap2.avif'
+      icon: '/images/uniswap2.png'
     },
     {
       title: 'switch eth for $pepe',
       description: 'switch ETH for $PEPE. We have ZERO taxes so you don\'t need to worry about buying with specific slippage, although you may need to use slippage during times of market volatility.',
-      icon: '/images/switch eth to pepe 4.avif'
+      icon: '/images/switch eth to pepe 4.png'
     }
   ];
 
@@ -42,7 +42,7 @@ const HowToBuy = () => {
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <Image
-          src="/images/1f3f2b_45e0862f90b549b2b8858d28a44b60cc~mv2.avif"
+          src="/images/background.png"
           alt="PEPE Background"
           fill
           className="object-cover opacity-10"

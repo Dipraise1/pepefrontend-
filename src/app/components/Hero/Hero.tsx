@@ -7,22 +7,22 @@ import Link from 'next/link';
 
 const Hero = () => {
   const tradingPlatforms = [
-    { name: 'robinhood', logo: '/images/robinhood1.avif', url: '#' },
-    { name: 'coinbase', logo: '/images/coinbase.avif', url: '#' },
-    { name: 'binance', logo: '/images/Binance_Logo_svg.avif', url: '#' },
-    { name: 'kraken', logo: '/images/kraken_300x300_x2.avif', url: '#' },
-    { name: 'upbit', logo: '/images/upbit.avif', url: '#' },
-    { name: 'bybit', logo: '/images/bybit_logo-min.avif', url: '#' },
-    { name: 'uniswap', logo: '/images/uniswap2.avif', url: '#' },
-    { name: 'etherscan', logo: '/images/etherscan.avif', url: '#' },
-    { name: 'coinmarketcap', logo: '/images/cm c.avif', url: '#' },
+    { name: 'robinhood', logo: '/images/robinhood1.png', url: '#' },
+    { name: 'coinbase', logo: '/images/coinbase.png', url: '#' },
+    { name: 'binance', logo: '/images/Binance_Logo_svg.png', url: '#' },
+    { name: 'kraken', logo: '/images/kraken_300x300_x2.png', url: '#' },
+    { name: 'upbit', logo: '/images/upbit.png', url: '#' },
+    { name: 'bybit', logo: '/images/bybit_logo-min.png', url: '#' },
+    { name: 'uniswap', logo: '/images/uniswap2.png', url: '#' },
+    { name: 'etherscan', logo: '/images/etherscan.png', url: '#' },
+    { name: 'coinmarketcap', logo: '/images/cm c.png', url: '#' },
   ];
 
   const socialLinks = [
-    { name: 'twitter', logo: '/images/twitter (2).avif', url: 'https://x.com/pepe_on_eth' },
-    { name: 'telegram', logo: '/images/telegram.avif', url: 'https://t.me/pepecoin_eth_erc' },
-    { name: 'website', logo: '/images/website.avif', url: 'https://www.pepe.site' },
-    { name: 'reddit', logo: '/images/reddit.avif', url: 'https://www.reddit.com/user/pepecoin_on_eth/' },
+    { name: 'twitter', logo: '/images/twitter (2).png', url: 'https://x.com/pepe_on_eth' },
+    { name: 'telegram', logo: '/images/telegram.png', url: 'https://t.me/pepecoin_eth_erc' },
+    { name: 'website', logo: '/images/website.png', url: 'https://www.pepe.site' },
+    { name: 'reddit', logo: '/images/reddit.png', url: 'https://www.reddit.com/user/pepecoin_on_eth/' },
   ];
 
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <Image
-          src="/images/1f3f2b_45e0862f90b549b2b8858d28a44b60cc~mv2.avif"
+          src="/images/background.png"
           alt="PEPE Background"
           fill
           className="object-cover opacity-10"
@@ -77,7 +77,7 @@ const Hero = () => {
             <AnimateIn direction="left" delay={0.3}>
               <div className="w-full h-64 sm:h-80 md:h-[32rem] relative mx-auto">
                 <Image
-                  src="/images/hero image .avif"
+                  src="/images/hero-image.png"
                   alt="PEPE Hero"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 50vw"
