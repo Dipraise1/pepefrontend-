@@ -20,8 +20,8 @@ const Hero = () => {
 
   const socialLinks = [
     { name: 'twitter', logo: '/images/twitter (2).avif', url: '#' },
-    { name: 'discord', logo: '/images/discord-logo.png', url: '#' },
-    { name: 'dextools', logo: '/images/dextools-logo.png', url: '#' },
+    { name: 'discord', logo: '/images/cm c.avif', url: '#' },
+    { name: 'dextools', logo: '/images/uniswap2.avif', url: '#' },
     { name: 'etherscan', logo: '/images/etherscan.avif', url: '#' },
   ];
 

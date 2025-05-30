@@ -1,10 +1,17 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import AnimateIn from '../AnimateIn/AnimateIn';
 
 const HowToBuy = () => {
+  const [copiedAddress, setCopiedAddress] = useState<string | null>(null);
+  
+  const handleCopyAddress = (address: string) => {
+    navigator.clipboard.writeText(address);
+    setCopiedAddress(address);
+    setTimeout(() => setCopiedAddress(null), 2000);
+  };
   const steps = [
     {
       title: 'create a wallet',
@@ -14,7 +21,7 @@ const HowToBuy = () => {
     {
       title: 'get some eth',
       description: 'have ETH in your wallet to switch to $PEPE. If you don\'t have any ETH, you can buy directly on metamask, transfer from another wallet, or buy on another exchange and send it to your wallet.',
-      icon: '/images/eth-icon.png'
+      icon: '/images/pepe-roadmap.png'
     },
     {
       title: 'go to uniswap',
@@ -69,6 +76,225 @@ const HowToBuy = () => {
             </AnimateIn>
           ))}
         </div>
+        
+        {/* Donation Wallets Section */}
+        <AnimateIn direction="up" delay={0.4}>
+          <div className="mt-16 bg-pepe-dark-green p-6 rounded-lg">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">★ Donation Addresses ★</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">BNB</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">0xcd7715E2Cd430a6b7A53FDd901CEa4BBC200B5FD</p>
+                  <button 
+                    onClick={() => handleCopyAddress("0xcd7715E2Cd430a6b7A53FDd901CEa4BBC200B5FD")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "0xcd7715E2Cd430a6b7A53FDd901CEa4BBC200B5FD" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">Bitcoin BTC</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">3JdjserDepuRFESDPrDLFyLUBfToGgRmC7</p>
+                  <button 
+                    onClick={() => handleCopyAddress("3JdjserDepuRFESDPrDLFyLUBfToGgRmC7")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "3JdjserDepuRFESDPrDLFyLUBfToGgRmC7" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">Ethereum ETH</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">0xA5Ff64d9427a2B74Ef39468DDa9392fC61fA0BF0</p>
+                  <button 
+                    onClick={() => handleCopyAddress("0xA5Ff64d9427a2B74Ef39468DDa9392fC61fA0BF0")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "0xA5Ff64d9427a2B74Ef39468DDa9392fC61fA0BF0" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">Solana SOL</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">6BdD8y14yTutTx2LwEaMpJaMHTjd1XRFqxGi84tnncBj</p>
+                  <button 
+                    onClick={() => handleCopyAddress("6BdD8y14yTutTx2LwEaMpJaMHTjd1XRFqxGi84tnncBj")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "6BdD8y14yTutTx2LwEaMpJaMHTjd1XRFqxGi84tnncBj" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">BCH</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">qq9neh946t6kqhqm8r2z5k54qk3ja9eh6gxnrq8u05</p>
+                  <button 
+                    onClick={() => handleCopyAddress("qq9neh946t6kqhqm8r2z5k54qk3ja9eh6gxnrq8u05")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "qq9neh946t6kqhqm8r2z5k54qk3ja9eh6gxnrq8u05" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">Dash</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">Xk6DBLQeA8VzhDWeansUUQBy5BDPJtSv2K</p>
+                  <button 
+                    onClick={() => handleCopyAddress("Xk6DBLQeA8VzhDWeansUUQBy5BDPJtSv2K")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "Xk6DBLQeA8VzhDWeansUUQBy5BDPJtSv2K" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">Dot</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">16cUdeCDVr86q6wZjS7rmr217xQ4DLon5eNoBjpt8hu4JM1c</p>
+                  <button 
+                    onClick={() => handleCopyAddress("16cUdeCDVr86q6wZjS7rmr217xQ4DLon5eNoBjpt8hu4JM1c")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "16cUdeCDVr86q6wZjS7rmr217xQ4DLon5eNoBjpt8hu4JM1c" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">LTC</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">MKeaxQy6y6uQwSeKizpriLfwmQJmGHeXYU</p>
+                  <button 
+                    onClick={() => handleCopyAddress("MKeaxQy6y6uQwSeKizpriLfwmQJmGHeXYU")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "MKeaxQy6y6uQwSeKizpriLfwmQJmGHeXYU" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">TRON</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">TUJfGEvJMwabDRipKEfsQab9uDes1wNETR</p>
+                  <button 
+                    onClick={() => handleCopyAddress("TUJfGEvJMwabDRipKEfsQab9uDes1wNETR")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "TUJfGEvJMwabDRipKEfsQab9uDes1wNETR" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="bg-pepe-green bg-opacity-30 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-white mb-2">XRP</h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-white break-all pr-2">rJqyDwgmESYDefdegqwjCAQLk7TFokbdGa</p>
+                  <button 
+                    onClick={() => handleCopyAddress("rJqyDwgmESYDefdegqwjCAQLk7TFokbdGa")} 
+                    className="flex-shrink-0 text-white hover:text-green-300 transition-colors"
+                    title="Copy address"
+                  >
+                    {copiedAddress === "rJqyDwgmESYDefdegqwjCAQLk7TFokbdGa" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );
